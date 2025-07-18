@@ -36,5 +36,7 @@ updates:
     open-pull-requests-limit: 3
     reviewers:
       - "caleb-wells"
+    assignees:
+      - "caleb-wells"
     commit-message:
       prefix: "ci"
