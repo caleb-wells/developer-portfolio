@@ -1,0 +1,42 @@
+version: 2
+updates:
+  # Main Astro application dependencies
+  - package-ecosystem: "npm"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    open-pull-requests-limit: 10
+    reviewers:
+      - "caleb-wells"
+    assignees:
+      - "caleb-wells"
+    commit-message:
+      prefix: "deps"
+      include: "scope"
+
+  # CDK infrastructure dependencies
+  - package-ecosystem: "npm"
+    directory: "/infrastructure"
+    schedule:
+      interval: "weekly"
+    open-pull-requests-limit: 5
+    reviewers:
+      - "caleb-wells"
+    assignees:
+      - "caleb-wells"
+    commit-message:
+      prefix: "deps(infra)"
+      include: "scope"
+
+  # GitHub Actions dependencies
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "monthly"
+    open-pull-requests-limit: 3
+    reviewers:
+      - "caleb-wells"
+    assignees:
+      - "caleb-wells"
+    commit-message:
+      prefix: "ci"
